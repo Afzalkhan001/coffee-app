@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Ember Roast",
-    "slug": "ember-roast",
+    "slug": "coffee",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -41,6 +41,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "003590ca-85ab-466f-b5a4-dc8337fd9473"
+      }
+    },
+    "owner": "afzalkhan8326"
   }
 }
