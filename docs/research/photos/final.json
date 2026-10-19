@@ -1,0 +1,127 @@
+{
+  "espresso": {
+    "url": "https://images.unsplash.com/photo-1642090111860-3f132abbc0dd?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Hanna Balan",
+    "unsplashPage": "https://unsplash.com/photos/a-cup-of-coffee-sitting-on-top-of-a-white-saucer-bIgfzbjQ47o"
+  },
+  "cappuccino": {
+    "url": "https://images.unsplash.com/photo-1559001724-fbad036dbc9e?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Phil Desforges",
+    "unsplashPage": "https://unsplash.com/photos/cafe-latte-Nw8wbiDE3gU"
+  },
+  "latte": {
+    "url": "https://images.unsplash.com/photo-1654921469305-28d0081c7a79?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Eiliv Aceron",
+    "unsplashPage": "https://unsplash.com/photos/a-cup-of-coffee-Nq52Oede1sk"
+  },
+  "flatWhite": {
+    "url": "https://images.unsplash.com/photo-1676506129134-c8aef41eb4d3?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Sarah Swainson",
+    "unsplashPage": "https://unsplash.com/photos/a-cup-of-coffee-with-a-leaf-drawn-on-it-fknnQ18xrds"
+  },
+  "caramelMacchiato": {
+    "url": "https://images.unsplash.com/photo-1779425082269-48ebb43db86a?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Tin Ma",
+    "unsplashPage": "https://unsplash.com/photos/iced-coffee-with-cream-and-caramel-on-a-wooden-coaster-EdDf35V696k"
+  },
+  "mocha": {
+    "url": "https://images.unsplash.com/photo-1627777620905-53a332869051?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Kitera Dent",
+    "unsplashPage": "https://unsplash.com/photos/white-and-red-ceramic-mug-with-brown-and-white-heart-shaped-coffee-art-P1QAEVLRldE"
+  },
+  "americano": {
+    "url": "https://images.unsplash.com/photo-1522120260484-0c13c92f4aa1?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Nathan Dumlao",
+    "unsplashPage": "https://unsplash.com/photos/white-ceramic-mug-on-brown-wooden-surface-iSUg73OJm7E"
+  },
+  "spanishLatte": {
+    "url": "https://images.unsplash.com/photo-1702165637225-2f43e0246a2c?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Melody Zimmerman",
+    "unsplashPage": "https://unsplash.com/photos/a-close-up-of-a-drink-on-a-table--aqtSgvoNA8"
+  },
+  "matchaLatte": {
+    "url": "https://images.unsplash.com/photo-1561658286-ecb9fe9d8480?w=900&q=80&auto=format&fit=crop",
+    "photographer": "MJ Tangonan",
+    "unsplashPage": "https://unsplash.com/photos/latte-on-black-ceramic-mug-CAUgg2lxRk0"
+  },
+  "chaiLatte": {
+    "url": "https://images.unsplash.com/photo-1741321725204-13e3452ff7fc?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Kseniia Selkälä",
+    "unsplashPage": "https://unsplash.com/photos/creamy-drink-with-cinnamon-sits-on-a-wooden-board-YJbTxbMH6lk"
+  },
+  "coldBrew": {
+    "url": "https://images.unsplash.com/photo-1731681963953-b959cb773c1a?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Monaz Nazary",
+    "unsplashPage": "https://unsplash.com/photos/a-glass-filled-with-liquid-sitting-on-top-of-a-table-USdAfJdfPtk"
+  },
+  "icedLatte": {
+    "url": "https://images.unsplash.com/photo-1589985902809-39d25db22101?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Ieva Kisunaite",
+    "unsplashPage": "https://unsplash.com/photos/clear-drinking-glass-with-ice-cubes-Up5VtspHhaM"
+  },
+  "icedPeachTea": {
+    "url": "https://images.unsplash.com/photo-1784735694665-8c601c531ce8?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Nguyen Phuc Hau",
+    "unsplashPage": "https://unsplash.com/photos/a-refreshing-cocktail-with-fruit-slices-on-a-wooden-table-LUcS41UWZXY"
+  },
+  "latteArt": {
+    "url": "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Fahmi Fakhrudin",
+    "unsplashPage": "https://unsplash.com/photos/person-making-latte-art-nzyzAUsbV0M"
+  },
+  "beans": {
+    "url": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Immo Wegmann",
+    "unsplashPage": "https://unsplash.com/photos/brown-coffee-beans-REqK8jIAtv8"
+  },
+  "croissant": {
+    "url": "https://images.unsplash.com/photo-1681218079567-35aef7c8e7e4?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Vicky Nguyen",
+    "unsplashPage": "https://unsplash.com/photos/a-croissant-sitting-on-top-of-a-cork-coaster-a4xoMVKzbak"
+  },
+  "avocadoToast": {
+    "url": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Doug Bagg",
+    "unsplashPage": "https://unsplash.com/photos/green-and-brown-vegetable-on-white-ceramic-plate-7GO11y7bznw"
+  },
+  "breakfastSandwich": {
+    "url": "https://images.unsplash.com/photo-1559962956-34e40045254f?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Silas Baisch",
+    "unsplashPage": "https://unsplash.com/photos/meat-burger-on-floor-zIG0yXtd4pI"
+  },
+  "bananaBread": {
+    "url": "https://images.unsplash.com/photo-1779282832757-fe41c2177d03?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Vasanth Kumar",
+    "unsplashPage": "https://unsplash.com/photos/slices-of-banana-bread-with-walnuts-on-a-wooden-table-D4b6gYsROJ0"
+  },
+  "cookie": {
+    "url": "https://images.unsplash.com/photo-1584369372650-359b4003e743?w=900&q=80&auto=format&fit=crop",
+    "photographer": "amirali mirhashemian",
+    "unsplashPage": "https://unsplash.com/photos/brown-cookies-on-brown-wooden-table-x6VuEH2npHw"
+  },
+  "cheesecake": {
+    "url": "https://images.unsplash.com/photo-1582623196338-9454316891dd?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Chaman Raj",
+    "unsplashPage": "https://unsplash.com/photos/brown-bread-with-chocolate-on-white-ceramic-plate-xH0TWBxGVZM"
+  },
+  "brownie": {
+    "url": "https://images.unsplash.com/photo-1636743715220-d8f8dd900b87?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Anna Przepiorka",
+    "unsplashPage": "https://unsplash.com/photos/a-pile-of-brownies-sitting-on-top-of-a-white-plate-LjtviHokbr4"
+  },
+  "tiramisu": {
+    "url": "https://images.unsplash.com/photo-1724116379273-ba32b70d112c?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Gina's Auckland",
+    "unsplashPage": "https://unsplash.com/photos/a-piece-of-cake-sitting-on-top-of-a-white-plate-d-Mx494kXAg"
+  },
+  "pastries": {
+    "url": "https://images.unsplash.com/photo-1623334044303-241021148842?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Conor Brown",
+    "unsplashPage": "https://unsplash.com/photos/a-bunch-of-croissants-that-are-on-a-table-sqkXyyj4WdE"
+  },
+  "cafeInterior": {
+    "url": "https://images.unsplash.com/photo-1633583960343-e258fb899aef?w=900&q=80&auto=format&fit=crop",
+    "photographer": "Jacob Baltierra",
+    "unsplashPage": "https://unsplash.com/photos/a-restaurant-with-a-long-counter-and-wooden-chairs-eGa-akClgIw"
+  }
+}

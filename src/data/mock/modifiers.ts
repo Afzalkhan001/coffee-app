@@ -1,0 +1,220 @@
+import type { ModifierGroup, ModifierOption, ProductModifierGroup } from '@/types/models';
+
+type OptionSeed = Omit<ModifierOption, 'groupId' | 'isAvailable'> & { isAvailable?: boolean };
+
+function group(
+  seed: Omit<ModifierGroup, 'options'> & { options: OptionSeed[] },
+): ModifierGroup {
+  return {
+    ...seed,
+    options: seed.options.map((o) => ({ isAvailable: true, ...o, groupId: seed.id })),
+  };
+}
+
+/** Reusable modifier groups — attached to products via PRODUCT_MODIFIER_GROUPS. `priceDelta` is whole rupees. */
+export const MODIFIER_GROUPS: ModifierGroup[] = [
+  group({
+    id: 'size',
+    name: 'Size',
+    display: 'size_circles',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'size-s', name: 'Small', shortName: 'S', priceDelta: 0, kcalDelta: -40, caption: '8 oz' },
+      { id: 'size-m', name: 'Medium', shortName: 'M', priceDelta: 30, kcalDelta: 0, caption: '12 oz' },
+      { id: 'size-l', name: 'Large', shortName: 'L', priceDelta: 60, kcalDelta: 60, caption: '16 oz' },
+    ],
+  }),
+  group({
+    id: 'temperature',
+    name: 'Temperature',
+    display: 'list',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'temp-hot', name: 'Hot', priceDelta: 0 },
+      { id: 'temp-iced', name: 'Iced', priceDelta: 0 },
+    ],
+  }),
+  group({
+    id: 'milk',
+    name: 'Milk',
+    display: 'list',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'milk-whole', name: 'Whole milk', priceDelta: 0, isDefault: true },
+      { id: 'milk-skim', name: 'Skim milk', priceDelta: 0, kcalDelta: -30 },
+      { id: 'milk-oat', name: 'Oat milk', priceDelta: 50, kcalDelta: 10 },
+      { id: 'milk-almond', name: 'Almond milk', priceDelta: 50, kcalDelta: -40 },
+      { id: 'milk-soy', name: 'Soy milk', priceDelta: 40, kcalDelta: -20 },
+      { id: 'milk-coconut', name: 'Coconut milk', priceDelta: 50, isAvailable: false },
+    ],
+  }),
+  group({
+    id: 'splash',
+    name: 'Splash of milk',
+    display: 'list',
+    selectionType: 'single',
+    required: false,
+    min: 0,
+    max: 1,
+    options: [
+      { id: 'splash-whole', name: 'Whole milk', priceDelta: 0, kcalDelta: 20 },
+      { id: 'splash-oat', name: 'Oat milk', priceDelta: 50, kcalDelta: 25 },
+      { id: 'splash-cream', name: 'Sweet cream', priceDelta: 60, kcalDelta: 60 },
+    ],
+  }),
+  group({
+    id: 'shots',
+    name: 'Shots',
+    display: 'list',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'shots-1', name: 'Single', priceDelta: 0, isDefault: true },
+      { id: 'shots-2', name: 'Double', priceDelta: 50, kcalDelta: 5 },
+      { id: 'shots-3', name: 'Triple', priceDelta: 90, kcalDelta: 10 },
+    ],
+  }),
+  group({
+    id: 'syrup',
+    name: 'Syrup',
+    display: 'list',
+    selectionType: 'multi',
+    required: false,
+    min: 0,
+    max: 2,
+    options: [
+      { id: 'syrup-vanilla', name: 'Vanilla', priceDelta: 40, kcalDelta: 35 },
+      { id: 'syrup-caramel', name: 'Caramel', priceDelta: 40, kcalDelta: 35 },
+      { id: 'syrup-hazelnut', name: 'Hazelnut', priceDelta: 40, kcalDelta: 35 },
+      { id: 'syrup-brown-sugar', name: 'Brown sugar', priceDelta: 40, kcalDelta: 40 },
+      { id: 'syrup-sf-vanilla', name: 'Sugar-free vanilla', priceDelta: 40, kcalDelta: 0 },
+    ],
+  }),
+  group({
+    id: 'sweetness',
+    name: 'Sweetness',
+    display: 'list',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'sweet-0', name: 'No sugar', priceDelta: 0, kcalDelta: -40 },
+      { id: 'sweet-50', name: 'Less sweet', priceDelta: 0, kcalDelta: -20 },
+      { id: 'sweet-100', name: 'Regular', priceDelta: 0, isDefault: true },
+      { id: 'sweet-150', name: 'Extra sweet', priceDelta: 0, kcalDelta: 25 },
+    ],
+  }),
+  group({
+    id: 'extras',
+    name: 'Extras',
+    display: 'list',
+    selectionType: 'multi',
+    required: false,
+    min: 0,
+    max: 3,
+    options: [
+      { id: 'extra-shot', name: 'Extra shot', priceDelta: 50, kcalDelta: 5 },
+      { id: 'extra-cold-foam', name: 'Vanilla cold foam', priceDelta: 60, kcalDelta: 70 },
+      { id: 'extra-whip', name: 'Whipped cream', priceDelta: 30, kcalDelta: 80 },
+      { id: 'extra-drizzle', name: 'Caramel drizzle', priceDelta: 30, kcalDelta: 30 },
+      { id: 'extra-cinnamon', name: 'Cinnamon dust', priceDelta: 0, kcalDelta: 2 },
+    ],
+  }),
+  group({
+    id: 'bread',
+    name: 'Bread',
+    display: 'list',
+    selectionType: 'single',
+    required: true,
+    min: 1,
+    max: 1,
+    options: [
+      { id: 'bread-sourdough', name: 'Sourdough', priceDelta: 0 },
+      { id: 'bread-multigrain', name: 'Multigrain', priceDelta: 0 },
+      { id: 'bread-bagel', name: 'Sesame bagel', priceDelta: 30, kcalDelta: 60 },
+      { id: 'bread-gf', name: 'Gluten-free', priceDelta: 60, kcalDelta: -20 },
+    ],
+  }),
+  group({
+    id: 'addons',
+    name: 'Add-ons',
+    display: 'list',
+    selectionType: 'multi',
+    required: false,
+    min: 0,
+    max: 3,
+    options: [
+      { id: 'addon-avocado', name: 'Smashed avocado', priceDelta: 90, kcalDelta: 120 },
+      { id: 'addon-egg', name: 'Extra egg', priceDelta: 60, kcalDelta: 80 },
+      { id: 'addon-bacon', name: 'Smoked bacon', priceDelta: 110, kcalDelta: 140 },
+      { id: 'addon-feta', name: 'Whipped feta', priceDelta: 70, kcalDelta: 90 },
+      { id: 'addon-chili', name: 'Chili crisp', priceDelta: 30, kcalDelta: 40 },
+    ],
+  }),
+  group({
+    id: 'serve',
+    name: 'Serve it',
+    display: 'list',
+    selectionType: 'single',
+    required: false,
+    min: 0,
+    max: 1,
+    options: [
+      { id: 'serve-warm', name: 'Warmed up', priceDelta: 0 },
+      { id: 'serve-room', name: 'Room temperature', priceDelta: 0 },
+    ],
+  }),
+  group({
+    id: 'dessert-addons',
+    name: 'Make it special',
+    display: 'list',
+    selectionType: 'multi',
+    required: false,
+    min: 0,
+    max: 2,
+    options: [
+      { id: 'dessert-gelato', name: 'Scoop of vanilla gelato', priceDelta: 120, kcalDelta: 140 },
+      { id: 'dessert-berries', name: 'Berry compote', priceDelta: 60, kcalDelta: 50 },
+      { id: 'dessert-whip', name: 'Whipped cream', priceDelta: 30, kcalDelta: 80 },
+    ],
+  }),
+];
+
+const attach = (productId: string, groupIds: string[]): ProductModifierGroup[] =>
+  groupIds.map((groupId, sortOrder) => ({ productId, groupId, sortOrder }));
+
+export const PRODUCT_MODIFIER_GROUPS: ProductModifierGroup[] = [
+  ...attach('espresso', ['shots', 'extras']),
+  ...attach('cappuccino', ['size', 'milk', 'syrup', 'extras']),
+  ...attach('latte', ['size', 'temperature', 'milk', 'syrup', 'extras']),
+  ...attach('flat-white', ['milk', 'extras']),
+  ...attach('caramel-macchiato', ['size', 'temperature', 'milk', 'syrup', 'extras']),
+  ...attach('mocha', ['size', 'temperature', 'milk', 'extras']),
+  ...attach('americano', ['size', 'temperature', 'shots', 'extras']),
+  ...attach('spanish-latte', ['size', 'temperature', 'milk', 'extras']),
+  ...attach('matcha-latte', ['size', 'temperature', 'milk', 'sweetness', 'extras']),
+  ...attach('chai-latte', ['size', 'temperature', 'milk', 'sweetness', 'extras']),
+  ...attach('cold-brew', ['size', 'splash', 'syrup', 'extras']),
+  ...attach('iced-latte', ['size', 'milk', 'syrup', 'extras']),
+  ...attach('iced-peach-tea', ['size', 'sweetness']),
+  ...attach('croissant', ['serve']),
+  ...attach('avocado-toast', ['bread', 'addons']),
+  ...attach('breakfast-sandwich', ['bread', 'addons']),
+  ...attach('cookie', ['serve']),
+  ...attach('banana-bread', ['serve']),
+  ...attach('cheesecake', ['dessert-addons']),
+  ...attach('brownie', ['serve', 'dessert-addons']),
+  ...attach('tiramisu', ['dessert-addons']),
+];
